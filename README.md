@@ -2,22 +2,16 @@
 
 A collection of Python automation scripts for Nokia SROS devices, including:
 
-- **bulk_nokia_cleanup.py**: Bulk filesystem cleanup on multiple routers  
 - **bulk_card_and_file_report_html.py**: Card/flash status reporting with HTML dashboard  
 
 ## Repository Structure
 
 nokia-sros-maintenance-scripts/
-├── cleanup/
-│ └── bulk_nokia_cleanup.py
 ├── reporting/
 │ └── bulk_card_and_file_report_html.py
 ├── my_routers.txt
 └── README.md
 
-
-- **cleanup/**  
-  Contains scripts to remove unwanted files and directories from `cf2:` and `cf3:` volumes, handling interactive confirms automatically.
 
 - **reporting/**  
   Contains scripts to collect `show card detail` and `file list` outputs, parse CF2/CF3 size, utilization, and state, and generate a color‐coded HTML report.
@@ -48,34 +42,6 @@ spare-7750sr1.ba1
 spare-7750sr1.bx1
 10.0.0.1
 10.0.0.2
-
-2. Cleanup Script
-
-cd cleanup
-chmod +x bulk_nokia_cleanup.py
-./bulk_nokia_cleanup.py
-
-    Prompts for SSH username/password.
-
-    Runs:
-
-        file disable cflash-id cf2:
-
-        file format cf2:
-
-        file enable cflash-id cf2:
-
-        file remove *upgrade* force
-
-        file remove *maintenance* force
-
-        A series of file remove cf3:…/* force
-
-        A series of file remove-directory cf3:…
-
-    Automatically answers interactive Are you sure (y/n)? and type yes prompts.
-
-    Logs each session to logs/<hostname>.log.
 
 
 Reporting Script
