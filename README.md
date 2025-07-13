@@ -38,8 +38,8 @@ Usage
 Populate the file with one router hostname or IP per line. Comment out entries with #.
 
 # my_routers.txt
-spare-7750sr1.ba1
-spare-7750sr1.bx1
+spare-7750sr1.xy1
+spare-7750sr1.xy2
 10.0.0.1
 10.0.0.2
 
